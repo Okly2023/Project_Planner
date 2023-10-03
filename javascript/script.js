@@ -4,7 +4,7 @@ import { addProject } from "./function/add-project.js";
 
 
 formProject();
-addProject((data) => {
+const log = addProject((data) => {
  	console.log(data); // Les données du formulaire sont disponibles ici
 });
 
