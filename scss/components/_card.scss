@@ -1,0 +1,21 @@
+@import '../utils/variables';
+
+.card{
+	box-shadow: 0 0 8px $boxShadow;
+	border-radius: $radius;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	.header-card{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0.5em;
+
+		button{
+			max-height: 50%;
+		}
+	}
+}

@@ -43,4 +43,27 @@ button {
   box-shadow: 0 0 5px rgba(194, 183, 183, 0.607);
   border-radius: 1em;
   padding: 2em;
+}
+
+.card {
+  box-shadow: 0 0 8px rgba(194, 183, 183, 0.607);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card .header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em;
+}
+.card .header-card button {
+  max-height: 50%;
+}
+
+.list-card {
+  display: grid;
+  grid-template-columns: repeat(10, 20%);
+  gap: 3em;
 }/*# sourceMappingURL=style.css.map */

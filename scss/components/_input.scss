@@ -1,11 +1,11 @@
 .input-text{
 	border: none;
 	box-shadow: 0 0 5px $boxShadow;
-	border-radius: 1em;
+	border-radius: $radius;
 	background-color: $backgroundInput;
 	max-width: 60%;
 	max-height: 10em;
-	padding: 0.5em;
+	padding: $padding;
 	margin: 1em;
 
 }
@@ -16,7 +16,7 @@ textArea{
 
 .input-date{
 	margin: 1em;
-	padding: 0.5em;
+	padding: $padding;
 	border-radius: 1em;
 }
 
