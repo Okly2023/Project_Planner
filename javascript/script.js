@@ -1,11 +1,17 @@
+import { clock } from "./component/form-header/form-header-clock.js";
 import { formProject } from "./component/form-project/formProject.js";
 import { barNav } from "./component/navigation/bar-nav.js";
 import { addProject } from "./function/add-project.js";
 
 
 formProject();
-const log = addProject((data) => {
- 	console.log(data); // Les données du formulaire sont disponibles ici
+addProject((data) => {
+ 	clock(data)
+ 	const div = document.querySelector('.form-project');
+	if(div){
+		div.remove();
+	}
 });
 
 
+barNav();
