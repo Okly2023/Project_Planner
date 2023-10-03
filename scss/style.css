@@ -1,3 +1,50 @@
+.input-text, textArea {
+  border: none;
+  box-shadow: 0 0 5px rgba(194, 183, 183, 0.607);
+  border-radius: 1em;
+  background-color: rgba(186, 186, 186, 0.096);
+  max-width: 60%;
+  max-height: 10em;
+  padding: 0.5em;
+  margin: 1em;
+}
+
+.input-date {
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+#name-project {
+  text-align: center;
+}
+
+button {
+  background: none;
+  border: none;
+  box-shadow: 0 0 3px;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-weight: bold;
+}
+
+#submit-project {
+  text-transform: uppercase;
+  padding: 0.8em;
+}
+
+.form-project {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 20em;
+  box-shadow: 0 0 5px rgba(194, 183, 183, 0.607);
+  border-radius: 1em;
+  padding: 2em;
+}
+
 #btn-link-nav {
   display: flex;
 }/*# sourceMappingURL=style.css.map */

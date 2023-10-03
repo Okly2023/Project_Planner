@@ -1,0 +1,25 @@
+.input-text{
+	border: none;
+	box-shadow: 0 0 5px $boxShadow;
+	border-radius: 1em;
+	background-color: $backgroundInput;
+	max-width: 60%;
+	max-height: 10em;
+	padding: 0.5em;
+	margin: 1em;
+
+}
+
+textArea{
+	@extend .input-text
+}
+
+.input-date{
+	margin: 1em;
+	padding: 0.5em;
+	border-radius: 1em;
+}
+
+#name-project{
+	text-align: center;
+}
