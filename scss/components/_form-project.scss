@@ -1,0 +1,17 @@
+@import '../utils/variables';
+@import './input';
+@import './btn';
+.form-project{
+	margin: auto;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 20em;
+
+	box-shadow: 0 0 5px $boxShadow;
+	border-radius: 1em;
+	padding: 2em;
+
+}
