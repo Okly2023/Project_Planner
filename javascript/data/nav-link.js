@@ -1,5 +1,6 @@
 export const navLink = [
-	'Home',
-	'Contact',
-	'My profil'
+	'View Projects',
+	'Add Project',
+	'Delete Project',
+	
 ]
