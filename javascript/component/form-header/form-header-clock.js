@@ -1,4 +1,4 @@
-export const clock = () => {
+export const clock = (formData) => {
 
     let main = document.querySelector('main')
 
@@ -36,7 +36,7 @@ export const clock = () => {
 
     let today = new Date()
     /* let promptedDate = month + '' + day + ', ' + year */
-    let promptedDate = 'October' + '' + '12' + ', ' + '2023'
+    let promptedDate = formData.date
     let date = new Date(promptedDate)
     let calculated =  (date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
 
@@ -45,8 +45,8 @@ export const clock = () => {
     div.textContent = 'Start Date: ' + today.toLocaleDateString('fr-FR');
     div2.textContent = calculated.toLocaleString('fr-FR') + ' days until deadline';
     div3.textContent = 'End Date: ' + date.toLocaleDateString('fr-FR');
-    div4.textContent = 'Project Name';
-    div5.textContent = 'Project Description'; // To be replaced by the two after these.
+    div4.textContent = formData.name;
+    div5.textContent = formData.description; // To be replaced by the two after these.
     /* div4.textContent = projectName          // Those two should have the,
     div5.textContent = projectDescription */   // information provided in the forms.
 
