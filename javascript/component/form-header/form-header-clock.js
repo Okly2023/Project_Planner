@@ -1,7 +1,3 @@
-import { formProject } from "../form-project/formProject"
-
-
-
 export const clock = () => {
     let main = document.querySelector('main')
 
