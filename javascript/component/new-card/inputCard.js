@@ -33,11 +33,11 @@ export const inputCard = () => {
 
     input.addEventListener('keyup', (e) => {
         value = e.target.value
-        console.log(value);
     })
     div.addEventListener('click', () => {
-        input.value = ''
         newCard(value)
+        input.value = ''
+        value = ''
         
     })
     main.appendChild(listSection)

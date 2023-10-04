@@ -43,7 +43,7 @@ export const clock = (formData) => {
     //textContents
 
     div.textContent = 'Start Date: ' + today.toLocaleDateString('fr-FR');
-    div2.textContent = calculated.toLocaleString('fr-FR') + ' days until deadline';
+    div2.textContent = parseInt(calculated).toLocaleString('fr-FR') + ' days until deadline';
     div3.textContent = 'End Date: ' + date.toLocaleDateString('fr-FR');
     div4.textContent = formData.name;
     div5.textContent = formData.description; // To be replaced by the two after these.
