@@ -26,3 +26,4 @@ addProject((data) => {
 });
 
 barNav();
+
