@@ -2,7 +2,7 @@ import { btnAdd } from "../../btn/btn-add.js";
 
 export const newCard = (name) => {
 	const section = document.querySelector('.list-card');
-
+  const childSection = section.firstChild
 
 	// Create a div card
 	const div = document.createElement('div');
@@ -26,7 +26,7 @@ export const newCard = (name) => {
 
 	// Button burger menu for option
 	const burger = document.createElement('button');
-	burger.textContent = '. . .';
+	burger.textContent = '...';
 
 	// input for add task
 	const inputTaskName = document.createElement('input');
@@ -39,7 +39,7 @@ export const newCard = (name) => {
 	const btn = btnAdd('btn-add-task');
 	console.log(btn);
 
-	section.appendChild(div);
+	section.insertBefore(div, childSection);
 	div.appendChild(headerCard);
 	div.appendChild(bodyCard);
 	div.appendChild(footerCard);
