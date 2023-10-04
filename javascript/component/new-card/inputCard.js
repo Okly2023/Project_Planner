@@ -1,5 +1,5 @@
 import { newCard } from "../main/card/newCard.js"
-
+import { filterSelect } from "../../function/filter-select.js"
 export const inputCard = () => {
     let main = document.querySelector('main')
     let listSection = document.querySelector('.list-card')
@@ -38,7 +38,7 @@ export const inputCard = () => {
         newCard(value)
         input.value = ''
         value = ''
-        
+        filterSelect()
     })
     main.appendChild(listSection)
 
