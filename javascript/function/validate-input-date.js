@@ -5,7 +5,6 @@
 export function validDate(date) {
 	const dateNow = new Date();
 	const dateProject = new Date(date)
-	console.log(dateNow);
-	console.log(dateProject);
+
 	return dateProject > dateNow ? true : false;
 }
