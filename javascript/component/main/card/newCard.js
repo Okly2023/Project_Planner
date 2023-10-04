@@ -37,7 +37,6 @@ export const newCard = (name) => {
 
 	//button add task
 	const btn = btnAdd('btn-add-task');
-	console.log(btn);
 
 	section.appendChild(div);
 	div.appendChild(headerCard);
@@ -49,5 +48,9 @@ export const newCard = (name) => {
 
 	footerCard.appendChild(inputTaskName);
 	footerCard.appendChild(btn);
+
+	btn.addEventListener('click', () => {
+		inputTaskName.value = ''
+	})
 
 }
