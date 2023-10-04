@@ -26,6 +26,8 @@ button {
   padding: 0.5em;
   border-radius: 1em;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 #submit-project {
