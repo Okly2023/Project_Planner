@@ -1,5 +1,21 @@
-export const navLink = [
-	'Home',
-	'Contact',
-	'My profil'
-]
+export const navLink =  [
+	'workplace',
+	'Recent',
+	'Favoris',
+	'Modeles',
+	'create'
+	
+  ];
+
+  
+
+
+
+
+
+
+
+
+
+
+

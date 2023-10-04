@@ -1,0 +1,24 @@
+header{
+    background: gainsboro;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+   
+    
+    nav{
+       
+        
+        margin-bottom: 15px;
+        #btn-link-nav{
+            display: flex;
+            padding-bottom: 2rem;
+            
+            
+            a{
+                margin: 10px;
+                cursor: pointer;
+            }
+            
+        }
+    }
+}
