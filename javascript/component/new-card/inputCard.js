@@ -38,7 +38,6 @@ export const inputCard = () => {
         newCard(value)
         input.value = ''
         value = ''
-        filterSelect()
     })
     main.appendChild(listSection)
 

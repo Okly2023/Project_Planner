@@ -14,8 +14,27 @@
 		align-items: center;
 		margin: 0.5em;
 
-		button{
-			max-height: 50%;
-		}
+		
 	}
+
+	.body-card{
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1em;
+		width: 85%;
+	}
+
+	.footer-card{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em;
+		height: 20%;
+		}
+
+		button{
+			height:1.5em;
+			display: flex;
+			align-items: center;
+		}
 }

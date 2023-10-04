@@ -4,25 +4,12 @@ export function addProject(callback) {
   const descriptionForm = document.getElementById('description-project');
   const dateForm = document.getElementById('date-project-dead-line');
 
-  let description, name, date;
 
-  nameForm.addEventListener('keyup', (e) => {
-    name = e.target.value;
-  });
-
-  descriptionForm.addEventListener('keyup', (e) => {
-    description = e.target.value;
-  });
-
-  dateForm.addEventListener('keyup', (e) => {
-    date = e.target.value;
-  });
-
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', () => {
     const formData = {
-      name: name,
-      description: description,
-      date: date
+      name: nameForm.value,
+      description: descriptionForm.value,
+      date: dateForm.value
     };
 
     // Appelez la fonction de rappel avec les données du formulaire
