@@ -1,4 +1,5 @@
 import { btnAdd } from "../../btn/btn-add.js";
+import { newTask } from "./newTask.js";
 
 export const newCard = (name) => {
 	const section = document.querySelector('.list-card');
@@ -7,6 +8,7 @@ export const newCard = (name) => {
 	// Create a div card
 	const div = document.createElement('div');
 	div.className = 'card';
+ 
 		
 	// create div header
 	const headerCard = document.createElement('div');
@@ -15,7 +17,7 @@ export const newCard = (name) => {
 	// create div body
 	const bodyCard = document.createElement('div');
 	bodyCard.className = 'body-card';
-
+  bodyCard.id = name;
 	// create div footer
 	const footerCard = document.createElement('div');
 	footerCard.className = 'footer-card';
@@ -37,7 +39,6 @@ export const newCard = (name) => {
 
 	//button add task
 	const btn = btnAdd('btn-add-task');
-	console.log(btn);
 
 	section.insertBefore(div, childSection);
 	div.appendChild(headerCard);
@@ -50,4 +51,13 @@ export const newCard = (name) => {
 	footerCard.appendChild(inputTaskName);
 	footerCard.appendChild(btn);
 
+  
+  const object = {
+    name:'test',
+    date:'24-02-2021'
+  };
+  
+  btn.addEventListener('click', ()=>{
+    newTask(object, bodyCard)
+  })
 }
