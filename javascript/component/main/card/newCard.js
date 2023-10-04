@@ -54,6 +54,5 @@ export const newCard = (name) => {
 
   btn.addEventListener('click', ()=>{
     
-  console.log('coucou');
   })
 }
