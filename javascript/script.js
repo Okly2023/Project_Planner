@@ -26,8 +26,4 @@ addProject((data) => {
 });
 
 
-
-newCard('alex');
-newCard('alex');newCard('alex');newCard('alex');newCard('alex');newCard('alex');newCard('alex');
-
 barNav();
