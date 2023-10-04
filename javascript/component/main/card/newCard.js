@@ -1,3 +1,4 @@
+
 import { btnAdd } from "../../btn/btn-add.js";
 import { newTask } from "./newTask.js";
 
@@ -39,6 +40,7 @@ export const newCard = (name) => {
 
 	//button add task
 	const btn = btnAdd('btn-add-task');
+	console.log(btn);
 
 	section.insertBefore(div, childSection);
 	div.appendChild(headerCard);
@@ -51,8 +53,18 @@ export const newCard = (name) => {
 	footerCard.appendChild(inputTaskName);
 	footerCard.appendChild(btn);
 
+  
 
+  
   btn.addEventListener('click', ()=>{
-    
+	let today = new Date()
+	const object = {
+		name: inputTaskName.value,
+		date: today.toLocaleString()
+	  };
+    newTask(object, bodyCard)
+	inputTaskName.value = ''
+	console.log(object);
   })
+
 }
