@@ -1,4 +1,4 @@
-export const newCard = () => {
+export const inputCard = () => {
     let main = document.querySelector('main')
     let listSection = document.createElement('section')
 	listSection.className = 'list-card'
