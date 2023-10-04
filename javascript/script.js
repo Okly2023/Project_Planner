@@ -22,6 +22,7 @@ addProject((data) => {
 	if(div){
 		div.remove();
 	}
+
 });
 
 barNav();
