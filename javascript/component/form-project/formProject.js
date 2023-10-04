@@ -35,7 +35,7 @@ export const formProject = () => {
 	// BTN SUBMIT RETURN VALUE FORM
 	const btnSubmit = document.createElement('button');
 	btnSubmit.id = 'submit-project';
-	btnSubmit.textContent = 'new project'
+	btnSubmit.textContent = 'add project'
 
 
 	// Create form with input
