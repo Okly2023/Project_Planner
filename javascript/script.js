@@ -13,14 +13,19 @@ main.appendChild(section)
 formProject();
 addProject((data) => {
  	clock(data)
-
+ 	const div = document.querySelector('.form-project');
+	const section = document.createElement('section')
+	section.className = 'list-card'
+	newCard()
+	
 
 	if(div){
 		div.remove();
 	}
+});
 
 
-});	
+
 newCard('alex');
 newCard('alex');newCard('alex');newCard('alex');newCard('alex');newCard('alex');newCard('alex');
 
