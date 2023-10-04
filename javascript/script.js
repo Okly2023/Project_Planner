@@ -26,8 +26,8 @@ addProject((data) => {
 });
 
 
-
-newCard('alex');
-newCard('alex');newCard('alex');newCard('alex');newCard('alex');newCard('alex');newCard('alex');
-
 barNav();
+/*let refreshButton = document.getElementById('btn-refresh');
+console.log(refreshButton);
+refreshButton.addEventListener('keyup', console.log('coucou'))*/
+

@@ -85,9 +85,20 @@ header nav {
 }
 header nav #btn-link-nav {
   display: flex;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  justify-content: space-between;
 }
-header nav #btn-link-nav a {
+header nav #btn-link-nav .dive_class {
+  display: flex;
+}
+header nav #btn-link-nav .dive_class a {
   margin: 10px;
   cursor: pointer;
+}
+header nav #btn-link-nav .dive_class .img_class {
+  cursor: pointer;
+}
+header nav #btn-link-nav .button_class {
+  cursor: pointer;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
