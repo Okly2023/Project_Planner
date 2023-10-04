@@ -35,7 +35,7 @@ export const inputCard = () => {
         value = e.target.value
         console.log(value);
     })
-    div.addEventListener('click', (e) => {
+    div.addEventListener('click', () => {
         input.value = ''
         newCard(value)
         
