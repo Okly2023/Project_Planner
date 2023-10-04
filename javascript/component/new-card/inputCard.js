@@ -1,13 +1,19 @@
+import { newCard } from "../main/card/newCard.js"
+
 export const inputCard = () => {
     let main = document.querySelector('main')
-    let listSection = document.createElement('section')
-	listSection.className = 'list-card'
+    let listSection = document.querySelector('.list-card')
     main.appendChild(listSection)
     listSection.style.marginTop = '30px'
     let bigDiv = document.createElement('div')
     bigDiv.className = 'divInputConfirm'
     let div = document.createElement('div')
-    div.style.backgroundColor = 'black'
+
+    div.textContent = '+'
+    div.style.cursor = 'pointer'
+    div.style.display = 'flex'
+    div.style.justifyContent = 'center'
+    div.style.alignItems = 'center'
     div.style.width = '30px'
     div.style.height = '30px'
     let input = document.createElement('input')
@@ -23,10 +29,16 @@ export const inputCard = () => {
     bigDiv.style.display = 'flex'
     bigDiv.style.flexDirection = 'row-reverse'
     bigDiv.style.width = 'fit-content'
-    div.addEventListener('click', () => {
-        let newCard = document.createElement('div')
-        newCard.className = 'new-card'
-        listSection.appendChild(newCard)
+    let value;
+
+    input.addEventListener('keyup', (e) => {
+        value = e.target.value
+        console.log(value);
+    })
+    div.addEventListener('click', (e) => {
+        input.value = ''
+        newCard(value)
+        
     })
     main.appendChild(listSection)
 
