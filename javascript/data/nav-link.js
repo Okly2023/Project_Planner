@@ -1,6 +1,21 @@
-export const navLink = [
-	'View Projects',
-	'Add Project',
-	'Delete Project'
+export const navLink =  [
+	'workplace',
+	'Recent',
+	'Favoris',
+	'Modeles',
+	'create'
 	
-]
+  ];
+
+  
+
+
+
+
+
+
+
+
+
+
+

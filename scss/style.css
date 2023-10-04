@@ -45,6 +45,20 @@ button {
   padding: 2em;
 }
 
-#btn-link-nav {
+header {
+  background: gainsboro;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+}
+header nav {
+  margin-bottom: 15px;
+}
+header nav #btn-link-nav {
   display: flex;
+  padding-bottom: 2rem;
+}
+header nav #btn-link-nav a {
+  margin: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
