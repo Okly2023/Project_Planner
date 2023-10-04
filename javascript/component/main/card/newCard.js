@@ -53,16 +53,17 @@ export const newCard = (name) => {
 	footerCard.appendChild(btn);
 
   
-  const object = {
-    name:'test',
-    date:'24-02-2021'
-  };
+
   
   btn.addEventListener('click', ()=>{
+	let today = new Date()
+	const object = {
+		name: inputTaskName.value,
+		date: today.toLocaleString()
+	  };
     newTask(object, bodyCard)
+	inputTaskName.value = ''
+	console.log(object);
   })
-	btn.addEventListener('click', () => {
-		inputTaskName.value = ''
-	})
 
 }
