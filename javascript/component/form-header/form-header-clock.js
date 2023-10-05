@@ -38,7 +38,7 @@ export const clock = (formData) => {
     bigDiv.appendChild(div3)
     section.appendChild(bigDiv)
     main.appendChild(section)
-
+    
     //Variables
 
     let today = new Date()
