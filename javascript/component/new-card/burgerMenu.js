@@ -21,7 +21,7 @@ export const burgerMenu = (nameArray, element, bodyCard) => {
     option3.textContent = 'About to be over'
     
     select.style.height = '5vh'
-    select.style.top = '15px'
+    select.style.top = '-20px'
     select.style.right = '20px'
     select.style.position = 'absolute'
     select.style.display = 'none'
