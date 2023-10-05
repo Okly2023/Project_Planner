@@ -40,7 +40,6 @@ export const newCard = (name) => {
 
 	//button add task
 	const btn = btnAdd('btn-add-task');
-	console.log(btn);
 
 	section.insertBefore(div, childSection);
 	div.appendChild(headerCard);
@@ -63,6 +62,7 @@ export const newCard = (name) => {
 		date: today.toLocaleString()
 	  };
     newTask(object, bodyCard)
+    
 	inputTaskName.value = ''
   })
 

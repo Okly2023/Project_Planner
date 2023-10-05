@@ -1,5 +1,12 @@
 @import '../components/form-project';
 @import '../components/card';
+@import '../components/task';
+
+section{
+	margin: 0 auto;
+	width: 85%;
+	padding: 1em;
+}
 
 .list-card{
 	display: grid;
