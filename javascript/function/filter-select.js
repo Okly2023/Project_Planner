@@ -2,15 +2,24 @@ export function filterSelect(compareValue) {
 
   // récupère la liste des cards
   const section = document.querySelectorAll('.card')
-  for (const item of section) {
-    const header = item.firstElementChild;
+  for (const card of section) {
+    const header = card.firstElementChild;
     const title = header.firstChild.textContent;
+   
     
-    if (title != compareValue) {
-      const div = header.parentElement;
-      div.style.display= 'none';
+    if (compareValue === '---') {
+      card.style.display = 'flex';
+    }else{
+      switch (title) {
+        case compareValue:
+            card.style.display = 'flex'
+          break;
+        default:
+            card.style.display = 'none'
+          break;
+      }
     }
   }
 
-
+  
 }

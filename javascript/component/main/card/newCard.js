@@ -1,5 +1,7 @@
 
+import { validTxtInput } from "../../../function/validate-input-txt.js";
 import { btnAdd } from "../../btn/btn-add.js";
+import { selectOption } from "../../select/select-otpion.js";
 import { newTask } from "./newTask.js";
 
 export const newCard = (name) => {
@@ -51,19 +53,41 @@ export const newCard = (name) => {
 
 	footerCard.appendChild(inputTaskName);
 	footerCard.appendChild(btn);
+	let value, isValid;
+  inputTaskName.addEventListener('keyup', (e) =>{
+		value = e.target.value
+		isValid = validTxtInput(value, 4, 16);
 
-  
+		if(!isValid){
+			inputTaskName.style.backgroundColor = 'rgb(255,0 ,0, 0.2)'
+			inputTaskName.style.boxShadow = '0 0 15px red'
+		}else{
+			inputTaskName.style.backgroundColor = 'rgb(0,204,0, 0.2)'
+			inputTaskName.style.boxShadow = '0 0 15px rgb(0,204,0, 0.2)'
+		}
+	});
 
+	
   
   btn.addEventListener('click', ()=>{
-	let today = new Date()
-	const object = {
-		name: inputTaskName.value,
-		date: today.toLocaleString()
-	  };
-    newTask(object, bodyCard)
-    
-	inputTaskName.value = ''
-  })
+		value = inputTaskName
+		isValid = validTxtInput(value, 4, 16);
+		
+		if(isValid){
+
+			let today = new Date()
+			const object = {
+				name: inputTaskName.value,
+				date: today.toLocaleString()
+	  	};
+			console.log('test');
+    	newTask(object, bodyCard)
+			console.log(object);
+			inputTaskName.value = ''
+  	}else{
+			alert('La valeur est incorrect.')
+		}
+	});
+	
 
 }

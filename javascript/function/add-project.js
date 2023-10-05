@@ -1,3 +1,4 @@
+import { selectOption } from "../component/select/select-otpion.js";
 import { validDate } from "./validate-input-date.js";
 import { validTxtInput } from "./validate-input-txt.js";
 
@@ -6,7 +7,7 @@ export function addProject(callback) {
   const nameForm = document.getElementById('name-project');
   const descriptionForm = document.getElementById('description-project');
   const dateForm = document.getElementById('date-project-dead-line');
-
+  
   nameForm.addEventListener('keyup', (e) =>{
     let value = e.target.value
     let boolean = validTxtInput(value, 4, 15)

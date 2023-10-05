@@ -36,6 +36,22 @@ button {
   padding: 0.8em;
 }
 
+.btn-add {
+  background: none;
+  border: none;
+  box-shadow: 0 0 3px;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.divInputConfirm {
+  display: flex;
+  align-items: center;
+}
+
 .form-project {
   margin: auto;
   display: flex;
@@ -87,6 +103,52 @@ button {
   text-align: center;
   padding: 0.5em 0;
   opacity: 0.5;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-text-select: none;
+  -webkit-user-select: none;
+}
+
+.to-do {
+  margin: 0.2em 10%;
+  box-shadow: 0 0 5px rgba(194, 183, 183, 0.607);
+  border-radius: 1em;
+  text-align: center;
+  padding: 0.5em 0;
+  opacity: 0.5;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-text-select: none;
+  -webkit-user-select: none;
+  background-color: red;
+}
+
+.doing {
+  margin: 0.2em 10%;
+  box-shadow: 0 0 5px rgba(194, 183, 183, 0.607);
+  border-radius: 1em;
+  text-align: center;
+  padding: 0.5em 0;
+  opacity: 0.5;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-text-select: none;
+  -webkit-user-select: none;
+  background-color: orange;
+}
+
+.done {
+  margin: 0.2em 10%;
+  box-shadow: 0 0 5px rgba(194, 183, 183, 0.607);
+  border-radius: 1em;
+  text-align: center;
+  padding: 0.5em 0;
+  opacity: 0.5;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-text-select: none;
+  -webkit-user-select: none;
+  background-color: green;
 }
 
 section {
