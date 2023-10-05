@@ -70,6 +70,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 }
 .card .header-card {
   display: flex;

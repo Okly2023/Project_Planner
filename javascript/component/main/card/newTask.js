@@ -10,13 +10,15 @@ export const newTask = (object, element) => {
   const title = document.createElement('h4');
   title.textContent = object.name;
 
+  const para = document.createElement('p');
+  para.textContent = object.date
 
   element.appendChild(task);
-  task.appendChild(title)
-
+  task.appendChild(title);
+  task.appendChild(para);
   task.addEventListener('click', () => {
     changeState(task)
-
+    
   })
 
 }

@@ -8,7 +8,8 @@ import { burgerMenu } from "../../new-card/burgerMenu.js"
 export const newCard = (name) => {
 	const section = document.querySelector('.list-card');
   const childSection = section.firstChild
-
+	
+	let nameArray = [] 
 	// Create a div card
 	const div = document.createElement('div');
 	div.className = 'card';
@@ -45,34 +46,31 @@ export const newCard = (name) => {
 	//button add task
 	const btn = btnAdd('btn-add-task');
 
+	// Select burger
+	const select = burgerMenu(nameArray,burger, bodyCard);
 	section.insertBefore(div, childSection);
 	div.appendChild(headerCard);
 	div.appendChild(bodyCard);
 	div.appendChild(footerCard);
-
 	headerCard.appendChild(title);
 	headerCard.appendChild(burger);
+	headerCard.appendChild(select)
+
 
 	footerCard.appendChild(inputTaskName);
 	footerCard.appendChild(btn);
 
   
 	let dateArray = []   
-	let nameArray = [] 
-  	btn.addEventListener('click', ()=>{
-		let today = new Date()
-		const object = {
-			name: inputTaskName.value,
-			date: today.toLocaleDateString('fr-FR')
-		};
-	newTask(object, bodyCard)
-		inputTaskName.value = ''
-		dateArray.push(object.date)
-		nameArray.push(object.name)
-	})
+	
 	burger.addEventListener('click', () =>  {
-		burgerMenu(nameArray)
-		
+		burger.style.display = 'none';
+		if (select.style.display === 'none') {
+			select.style.display = 'block'
+		}
+		else{
+			select.style.display = 'none'
+		}
 	})
 	
 	
@@ -90,12 +88,11 @@ export const newCard = (name) => {
 		}
 	});
 
-	
   
   btn.addEventListener('click', ()=>{
 		value = inputTaskName
 		isValid = validTxtInput(value, 4, 16);
-		
+
 		if(isValid){
 
 			let today = new Date()
@@ -103,10 +100,10 @@ export const newCard = (name) => {
 				name: inputTaskName.value,
 				date: today.toLocaleString()
 	  	};
-			console.log('test');
     	newTask(object, bodyCard)
-			console.log(object);
+
 			inputTaskName.value = ''
+			nameArray.push(object);
   	}else{
 			alert('La valeur est incorrect.')
 		}
