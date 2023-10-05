@@ -1,3 +1,5 @@
+import { changeState } from "../../task/changeState.js";
+
 export const newTask = (object, element) => {
   
   //create div task
@@ -11,5 +13,10 @@ export const newTask = (object, element) => {
   console.log(object.name);
   element.appendChild(task);
   task.appendChild(title)
+
+  task.addEventListener('click', () => {
+    changeState(task)
+
+  })
 
 }

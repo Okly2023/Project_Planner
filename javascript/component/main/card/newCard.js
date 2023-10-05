@@ -64,7 +64,6 @@ export const newCard = (name) => {
 	  };
     newTask(object, bodyCard)
 	inputTaskName.value = ''
-	console.log(object);
   })
 
 }
