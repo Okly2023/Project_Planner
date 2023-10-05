@@ -27,7 +27,7 @@ export const burgerMenu = (nameArray, element, bodyCard) => {
     select.style.display = 'none'
     
     select.addEventListener("change", (e) => {
-        console.log(bodyCard);
+
         switch (e.target.value) {
             case 'Name':
                 sortByName(nameArray,bodyCard)

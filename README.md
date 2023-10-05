@@ -4,7 +4,7 @@ Bienvenue dans le Readme du Projet Planner ! Ce projet a été développé par u
 
 ## Déploiement
 
-Vous pouvez accéder au site du Projet Planner en suivant ce lien : [Lien du site](insérer_le_lien_du_site_ici)
+Vous pouvez accéder au site du Projet Planner en suivant ce lien : [Lien du site](https://okly2023.github.io/Project_Planner/)
 
 ## Description
 
