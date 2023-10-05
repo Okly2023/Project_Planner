@@ -1,6 +1,7 @@
 
 import { btnAdd } from "../../btn/btn-add.js";
 import { newTask } from "./newTask.js";
+import { burgerMenu } from "../../new-card/burgerMenu.js"
 
 export const newCard = (name) => {
 	const section = document.querySelector('.list-card');
@@ -30,6 +31,7 @@ export const newCard = (name) => {
 	// Button burger menu for option
 	const burger = document.createElement('button');
 	burger.textContent = '...';
+	burger.className = 'burger-menu';
 
 	// input for add task
 	const inputTaskName = document.createElement('input');
@@ -53,17 +55,24 @@ export const newCard = (name) => {
 	footerCard.appendChild(btn);
 
   
-
-  
-  btn.addEventListener('click', ()=>{
-	let today = new Date()
-	const object = {
-		name: inputTaskName.value,
-		date: today.toLocaleString()
-	  };
-    newTask(object, bodyCard)
-    
-	inputTaskName.value = ''
-  })
+	let dateArray = []   
+	let nameArray = [] 
+  	btn.addEventListener('click', ()=>{
+		let today = new Date()
+		const object = {
+			name: inputTaskName.value,
+			date: today.toLocaleDateString('fr-FR')
+		};
+	newTask(object, bodyCard)
+		inputTaskName.value = ''
+		dateArray.push(object.date)
+		nameArray.push(object.name)
+	})
+	burger.addEventListener('click', () =>  {
+		burgerMenu(nameArray)
+		
+	})
+	
+	
 
 }
