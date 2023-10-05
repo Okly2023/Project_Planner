@@ -12,6 +12,10 @@ export const clock = (formData) => {
     let div4 = document.createElement('div')
     let div5 = document.createElement('div')
     let smallDiv = document.createElement('div')
+    let legendDiv = document.createElement('div')
+    let legendRed = document.createElement('div')
+    let legendOrange = document.createElement('div')
+    let legendGreen = document.createElement('div')
 
     //Adding classes
 
@@ -31,11 +35,14 @@ export const clock = (formData) => {
     bigDiv.appendChild(div3)
     section.appendChild(bigDiv)
     main.appendChild(section)
+    bigDiv.appendChild(legendDiv)
+    legendDiv.appendChild(legendRed)
+    legendDiv.appendChild(legendOrange)
+    legendDiv.appendChild(legendGreen)
 
     //Variables
 
     let today = new Date()
-    /* let promptedDate = month + '' + day + ', ' + year */
     let promptedDate = formData.date
     let date = new Date(promptedDate)
     let calculated =  (date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24);
@@ -46,11 +53,11 @@ export const clock = (formData) => {
     div2.textContent = parseInt(calculated).toLocaleString('fr-FR') + ' days until deadline';
     div3.textContent = 'End Date: ' + date.toLocaleDateString('fr-FR');
     div4.textContent = formData.name;
-    div5.textContent = formData.description; // To be replaced by the two after these.
-    /* div4.textContent = projectName          // Those two should have the,
-    div5.textContent = projectDescription */   // information provided in the forms.
+    div5.textContent = formData.description;
+    legendRed.textContent = 'To Do Task';
+    legendOrange.textContent = 'Doing Task';
+    legendGreen.textContent = 'Done Task';
 
-    
     //Div styling
 
     div.style.color = 'white'
@@ -93,7 +100,34 @@ export const clock = (formData) => {
     bigDiv.style.display = 'flex'
     bigDiv.style.justifyContent = 'space-around'
     bigDiv.style.alignItems = 'flex-end'
+    bigDiv.style.position = 'relative'
 
+    //legendDiv styling
+
+    legendDiv.style.position = 'absolute'
+    legendDiv.style.top = '10px'
+    legendDiv.style.right = '10px'
+
+    //colorLegendDiv styling
+
+    legendRed.style.backgroundColor = 'red'
+    legendOrange.style.backgroundColor = 'orange'
+    legendGreen.style.backgroundColor = 'green'
+    legendRed.style.opacity = '0.5'
+    legendOrange.style.opacity = '0.5'
+    legendGreen.style.opacity = '0.5'
+    legendRed.style.borderRadius = '10px'
+    legendOrange.style.borderRadius = '10px'
+    legendGreen.style.borderRadius = '10px'
+    legendRed.style.marginBottom = '10px'
+    legendOrange.style.marginBottom = '10px'
+    legendRed.style.padding = '5px'
+    legendOrange.style.padding = '5px'
+    legendGreen.style.padding = '5px'
+    legendRed.style.color = 'white'
+    legendOrange.style.color = 'white'
+    legendGreen.style.color = 'white'
+    
 }
 
 

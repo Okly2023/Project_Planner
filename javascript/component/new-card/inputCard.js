@@ -57,5 +57,7 @@ export const inputCard = () => {
        
     })
     main.appendChild(listSection)
+    input.className= 'input-text';
+    div.className= 'btn-add';
 
 }
