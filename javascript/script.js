@@ -10,6 +10,7 @@ const main = document.querySelector('main');
 const section = document.createElement('section');
 section.className = 'list-card';
 main.appendChild(section)
+barNav();
 formProject();
 addProject((data) => {
  	clock(data)
@@ -24,4 +25,3 @@ addProject((data) => {
 	}
 });
 
-barNav();

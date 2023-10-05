@@ -151,6 +151,15 @@ button {
   background-color: green;
 }
 
+select {
+  margin: 0.5em;
+  border-radius: 1em;
+}
+
+option {
+  border-radius: 1em;
+}
+
 section {
   margin: 0 auto;
   width: 85%;

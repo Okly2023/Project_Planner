@@ -1,0 +1,10 @@
+@import '../utils/variables';
+select{
+	margin: 0.5em;
+	border-radius: $radius;
+
+
+}
+option{
+	border-radius: $radius;
+}
