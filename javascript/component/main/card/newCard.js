@@ -62,8 +62,8 @@ export const newCard = (name) => {
 		date: today.toLocaleString()
 	  };
     newTask(object, bodyCard)
+    
 	inputTaskName.value = ''
-	console.log(object);
   })
 
 }

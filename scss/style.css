@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Kanit:wght@600&family=Noto+Serif+JP:wght@500&family=Roboto:wght@700&family=Rosarivo&family=Rubik+Iso&family=Varela+Round&display=swap");
 .input-text, textArea {
   border: none;
   box-shadow: 0 0 5px rgba(194, 183, 183, 0.607);
@@ -60,8 +61,38 @@ button {
   align-items: center;
   margin: 0.5em;
 }
-.card .header-card button {
-  max-height: 50%;
+.card .body-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  width: 85%;
+}
+.card .footer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  height: 20%;
+}
+.card button {
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.task {
+  margin: 0.2em 10%;
+  box-shadow: 0 0 5px rgba(194, 183, 183, 0.607);
+  border-radius: 1em;
+  text-align: center;
+  padding: 0.5em 0;
+  opacity: 0.5;
+}
+
+section {
+  margin: 0 auto;
+  width: 85%;
+  padding: 1em;
 }
 
 .list-card {
@@ -74,6 +105,8 @@ button {
   margin: 0;
   padding: 0;
   font-size: 100%;
+  letter-spacing: 2px;
+  font-family: "Varela Round";
 }
 
 header {
@@ -81,6 +114,7 @@ header {
   width: 100%;
   color: black;
   font-weight: bold;
+  opacity: 0.6;
 }
 header nav {
   margin-bottom: 15px;

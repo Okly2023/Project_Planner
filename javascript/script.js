@@ -25,4 +25,3 @@ addProject((data) => {
 });
 
 barNav();
-

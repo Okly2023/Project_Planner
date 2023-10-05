@@ -16,7 +16,7 @@ export const  barNav = () =>{
 	 button_v.classList.add('button_class');
 	 button_v.appendChild(button_t);
 	 myDiv.appendChild(button_v);
-     console.log(button_v);
+
 	button_v.addEventListener('click', () => refreshPage())
 	 
 	
