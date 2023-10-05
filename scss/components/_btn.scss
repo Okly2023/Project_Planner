@@ -16,3 +16,7 @@ button{
 	text-transform: uppercase;
 	padding: 0.8em;
 }
+
+.btn-add{
+	@include button;
+}
