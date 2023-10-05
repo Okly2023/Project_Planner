@@ -11,6 +11,4 @@ export function filterSelect(compareValue) {
       div.style.display= 'none';
     }
   }
-
-
 }

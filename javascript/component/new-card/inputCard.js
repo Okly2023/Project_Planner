@@ -1,5 +1,6 @@
 import { newCard } from "../main/card/newCard.js"
 import { filterSelect } from "../../function/filter-select.js"
+import { validTxtInput } from "../../function/validate-input-txt.js"
 export const inputCard = () => {
     let main = document.querySelector('main')
     let listSection = document.querySelector('.list-card')
@@ -29,15 +30,31 @@ export const inputCard = () => {
     bigDiv.style.display = 'flex'
     bigDiv.style.flexDirection = 'row-reverse'
     bigDiv.style.width = 'fit-content'
-    let value;
+    let value, isValidTxt;
 
+    
+    
     input.addEventListener('keyup', (e) => {
         value = e.target.value
+        isValidTxt = validTxtInput(value, 4, 15);
+        if(!isValidTxt){
+            input.style.backgroundColor = 'rgb(255,0 ,0, 0.2)'
+            input.style.boxShadow = '0 0 15px red'
+          }else{
+            input.style.backgroundColor = 'rgb(0,204,0, 0.2)'
+            input.style.boxShadow = '0 0 15px rgb(0,204,0, 0.2)'
+          }
     })
+
     div.addEventListener('click', () => {
-        newCard(value)
-        input.value = ''
-        value = ''
+        if (isValidTxt) {
+            newCard(value)
+            input.value = ''
+            value = ''
+        }else{
+            alert('La valeur est incorrect.')
+        }
+       
     })
     main.appendChild(listSection)
 
