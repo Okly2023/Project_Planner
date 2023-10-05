@@ -3,11 +3,13 @@ import { validTxtInput } from "../../../function/validate-input-txt.js";
 import { btnAdd } from "../../btn/btn-add.js";
 import { selectOption } from "../../select/select-otpion.js";
 import { newTask } from "./newTask.js";
+import { burgerMenu } from "../../new-card/burgerMenu.js"
 
 export const newCard = (name) => {
 	const section = document.querySelector('.list-card');
   const childSection = section.firstChild
-
+	
+	let nameArray = [] 
 	// Create a div card
 	const div = document.createElement('div');
 	div.className = 'card';
@@ -32,6 +34,7 @@ export const newCard = (name) => {
 	// Button burger menu for option
 	const burger = document.createElement('button');
 	burger.textContent = '...';
+	burger.className = 'burger-menu';
 
 	// input for add task
 	const inputTaskName = document.createElement('input');
@@ -43,16 +46,34 @@ export const newCard = (name) => {
 	//button add task
 	const btn = btnAdd('btn-add-task');
 
+	// Select burger
+	const select = burgerMenu(nameArray,burger, bodyCard);
 	section.insertBefore(div, childSection);
 	div.appendChild(headerCard);
 	div.appendChild(bodyCard);
 	div.appendChild(footerCard);
-
 	headerCard.appendChild(title);
 	headerCard.appendChild(burger);
+	headerCard.appendChild(select)
+
 
 	footerCard.appendChild(inputTaskName);
 	footerCard.appendChild(btn);
+
+  
+	let dateArray = []   
+	
+	burger.addEventListener('click', () =>  {
+		burger.style.display = 'none';
+		if (select.style.display === 'none') {
+			select.style.display = 'block'
+		}
+		else{
+			select.style.display = 'none'
+		}
+	})
+	
+	
 	let value, isValid;
   inputTaskName.addEventListener('keyup', (e) =>{
 		value = e.target.value
@@ -67,12 +88,11 @@ export const newCard = (name) => {
 		}
 	});
 
-	
   
   btn.addEventListener('click', ()=>{
 		value = inputTaskName
 		isValid = validTxtInput(value, 4, 16);
-		
+
 		if(isValid){
 
 			let today = new Date()
@@ -80,10 +100,10 @@ export const newCard = (name) => {
 				name: inputTaskName.value,
 				date: today.toLocaleString()
 	  	};
-			console.log('test');
     	newTask(object, bodyCard)
-			console.log(object);
+
 			inputTaskName.value = ''
+			nameArray.push(object);
   	}else{
 			alert('La valeur est incorrect.')
 		}
