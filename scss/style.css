@@ -36,6 +36,22 @@ button {
   padding: 0.8em;
 }
 
+.btn-add {
+  background: none;
+  border: none;
+  box-shadow: 0 0 3px;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.divInputConfirm {
+  display: flex;
+  align-items: center;
+}
+
 .form-project {
   margin: auto;
   display: flex;
