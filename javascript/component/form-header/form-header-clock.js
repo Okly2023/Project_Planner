@@ -18,6 +18,7 @@ export const clock = (formData) => {
     let legendRed = document.createElement('div')
     let legendOrange = document.createElement('div')
     let legendGreen = document.createElement('div')
+
     let select = createSelect();
     //Adding classes
 
@@ -38,7 +39,11 @@ export const clock = (formData) => {
     bigDiv.appendChild(div3)
     section.appendChild(bigDiv)
     main.appendChild(section)
-    
+    bigDiv.appendChild(legendDiv)
+    legendDiv.appendChild(legendRed)
+    legendDiv.appendChild(legendOrange)
+    legendDiv.appendChild(legendGreen)
+
     //Variables
 
     let today = new Date()
@@ -99,6 +104,40 @@ export const clock = (formData) => {
     bigDiv.style.display = 'flex'
     bigDiv.style.justifyContent = 'space-around'
     bigDiv.style.alignItems = 'flex-end'
+    bigDiv.style.position = 'relative'
+
+    //legendDiv styling
+
+    legendDiv.style.position = 'absolute'
+    legendDiv.style.top = '10px'
+    legendDiv.style.right = '10px'
+
+    //colorLegendDiv styling
+
+    legendRed.style.backgroundColor = 'red'
+    legendOrange.style.backgroundColor = 'orange'
+    legendGreen.style.backgroundColor = 'green'
+    legendRed.style.opacity = '0.5'
+    legendOrange.style.opacity = '0.5'
+    legendGreen.style.opacity = '0.5'
+    legendRed.style.borderRadius = '10px'
+    legendOrange.style.borderRadius = '10px'
+    legendGreen.style.borderRadius = '10px'
+    legendRed.style.marginBottom = '10px'
+    legendOrange.style.marginBottom = '10px'
+    legendRed.style.padding = '5px'
+    legendOrange.style.padding = '5px'
+    legendGreen.style.padding = '5px'
+    legendRed.style.color = 'white'
+    legendOrange.style.color = 'white'
+    legendGreen.style.color = 'white'
+    
+    //select styling
+
+    select.style.position ='absolute'
+    select.style.right = '20px'
+    select.style.top = '6rem'
+
 
 }
 
