@@ -1,3 +1,5 @@
+import { createSelect } from "../select/select-btn.js"
+
 export const clock = (formData) => {
 
     let main = document.querySelector('main')
@@ -17,6 +19,7 @@ export const clock = (formData) => {
     let legendOrange = document.createElement('div')
     let legendGreen = document.createElement('div')
 
+    let select = createSelect();
     //Adding classes
 
     div.classList.add('startDate')
@@ -26,8 +29,9 @@ export const clock = (formData) => {
     div5.classList.add('projectDescription')
 
     //AppendChilds
-
+    
     smallDiv.appendChild(div4)
+    smallDiv.appendChild(select)
     smallDiv.appendChild(div5)
     smallDiv.appendChild(div)
     bigDiv.appendChild(smallDiv)
@@ -128,6 +132,13 @@ export const clock = (formData) => {
     legendOrange.style.color = 'white'
     legendGreen.style.color = 'white'
     
+    //select styling
+
+    select.style.position ='absolute'
+    select.style.right = '20px'
+    select.style.top = '6rem'
+
+
 }
 
 
