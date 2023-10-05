@@ -202,7 +202,8 @@ header nav #btn-link-nav .dive_class a {
   margin: 10px;
   cursor: pointer;
 }
-header nav #btn-link-nav .dive_class .img_class {
+header nav #btn-link-nav .dive_class .nav-link-image {
+  margin: 10px;
   cursor: pointer;
 }
 header nav #btn-link-nav .button_class {
