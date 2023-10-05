@@ -1,3 +1,5 @@
+import { createSelect } from "../select/select-btn.js"
+
 export const clock = (formData) => {
 
     let main = document.querySelector('main')
@@ -12,7 +14,7 @@ export const clock = (formData) => {
     let div4 = document.createElement('div')
     let div5 = document.createElement('div')
     let smallDiv = document.createElement('div')
-
+    let select = createSelect();
     //Adding classes
 
     div.classList.add('startDate')
@@ -22,8 +24,9 @@ export const clock = (formData) => {
     div5.classList.add('projectDescription')
 
     //AppendChilds
-
+    
     smallDiv.appendChild(div4)
+    smallDiv.appendChild(select)
     smallDiv.appendChild(div5)
     smallDiv.appendChild(div)
     bigDiv.appendChild(smallDiv)
@@ -31,7 +34,7 @@ export const clock = (formData) => {
     bigDiv.appendChild(div3)
     section.appendChild(bigDiv)
     main.appendChild(section)
-
+    
     //Variables
 
     let today = new Date()
@@ -93,6 +96,13 @@ export const clock = (formData) => {
     bigDiv.style.display = 'flex'
     bigDiv.style.justifyContent = 'space-around'
     bigDiv.style.alignItems = 'flex-end'
+
+    //select styling
+
+    select.style.position ='absolute'
+    select.style.right = '20px'
+    select.style.top = '6rem'
+
 
 }
 

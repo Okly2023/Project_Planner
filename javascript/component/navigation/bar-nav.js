@@ -14,7 +14,6 @@ export const  barNav = () =>{
 	let button_v = document.createElement("button");
 	let button_t = document.createTextNode("new project");
 	 button_v.classList.add('button_class');
-	
 	 button_v.appendChild(button_t);
 	 myDiv.appendChild(button_v);
      console.log(button_v);
