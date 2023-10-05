@@ -135,9 +135,7 @@ export const clock = (formData) => {
     
     //select styling
 
-    select.style.position ='absolute'
-    select.style.right = '20px'
-    select.style.top = '6rem'
+
 
 
     // Evenement
