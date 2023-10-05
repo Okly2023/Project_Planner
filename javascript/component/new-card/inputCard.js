@@ -49,7 +49,7 @@ export const inputCard = () => {
 
     div.addEventListener('click', () => {
         const select = document.getElementById('filter-select')
-       
+        
         
         if (isValidTxt) {
             const option = selectOption(input.value);

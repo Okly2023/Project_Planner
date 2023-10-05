@@ -90,9 +90,8 @@ export const newCard = (name) => {
 
   
   btn.addEventListener('click', ()=>{
-		value = inputTaskName
+		value = inputTaskName.value
 		isValid = validTxtInput(value, 4, 16);
-
 		if(isValid){
 
 			let today = new Date()
