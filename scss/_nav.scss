@@ -15,13 +15,15 @@ header{
             justify-content: space-between;
             .dive_class{
                 display: flex;
-            
+              
             a{
                 margin: 10px;
                 cursor: pointer;
             }
-          .img_class{
+          .nav-link-image{
+            margin: 10px;
             cursor: pointer;
+            
           }
         }
         .button_class{

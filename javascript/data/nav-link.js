@@ -1,9 +1,9 @@
 export const navLink =  [
-	'workplace',
-	'Recent',
-	'Favoris',
-	'Modeles',
-	'create'
+	'Home',
+	'News',
+	'About',
+	'Contact',
+	'Profil'
 	
   ];
 
