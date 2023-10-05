@@ -4,7 +4,7 @@ export const newTask = (object, element) => {
   
   //create div task
   const task = document.createElement('div');
-  task.className = 'task';
+  task.className = object.class;
 
   //create title task
   const title = document.createElement('h4');

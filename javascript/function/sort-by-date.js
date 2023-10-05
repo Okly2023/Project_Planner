@@ -15,3 +15,4 @@ export function sortByDate(nameArray, elementArray) {
 		newTask(item,elementArray)
 	}
 }
+
