@@ -1,6 +1,7 @@
 
 import { validTxtInput } from "../../../function/validate-input-txt.js";
 import { btnAdd } from "../../btn/btn-add.js";
+import { selectOption } from "../../select/select-otpion.js";
 import { newTask } from "./newTask.js";
 
 export const newCard = (name) => {
@@ -66,16 +67,22 @@ export const newCard = (name) => {
 		}
 	});
 
+	
   
   btn.addEventListener('click', ()=>{
+		value = inputTaskName
+		isValid = validTxtInput(value, 4, 16);
+		
 		if(isValid){
+
 			let today = new Date()
 			const object = {
 				name: inputTaskName.value,
 				date: today.toLocaleString()
 	  	};
+			console.log('test');
     	newTask(object, bodyCard)
-    
+			console.log(object);
 			inputTaskName.value = ''
   	}else{
 			alert('La valeur est incorrect.')

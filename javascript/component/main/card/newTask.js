@@ -10,7 +10,7 @@ export const newTask = (object, element) => {
   const title = document.createElement('h4');
   title.textContent = object.name;
 
-  console.log(object.name);
+
   element.appendChild(task);
   task.appendChild(title)
 

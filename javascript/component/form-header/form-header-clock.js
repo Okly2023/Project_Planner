@@ -1,3 +1,4 @@
+import { filterSelect } from "../../function/filter-select.js"
 import { createSelect } from "../select/select-btn.js"
 
 export const clock = (formData) => {
@@ -139,6 +140,10 @@ export const clock = (formData) => {
     select.style.top = '6rem'
 
 
+    // Evenement
+    select.addEventListener('change',(e)=>{
+        filterSelect(e.target.value);
+    })
 }
 
 

@@ -1,6 +1,7 @@
 import { newCard } from "../main/card/newCard.js"
 import { filterSelect } from "../../function/filter-select.js"
 import { validTxtInput } from "../../function/validate-input-txt.js"
+import { selectOption } from "../select/select-otpion.js"
 export const inputCard = () => {
     let main = document.querySelector('main')
     let listSection = document.querySelector('.list-card')
@@ -47,8 +48,14 @@ export const inputCard = () => {
     })
 
     div.addEventListener('click', () => {
+        const select = document.getElementById('filter-select')
+       
+        
         if (isValidTxt) {
-            newCard(value)
+            const option = selectOption(input.value);
+            select.appendChild(option);
+
+            newCard(value);
             input.value = ''
             value = ''
         }else{
