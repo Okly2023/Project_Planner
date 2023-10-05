@@ -19,7 +19,6 @@ addProject((data) => {
 	section.className = 'list-card'
 	inputCard()
 	
-
 	if(div){
 		div.remove();
 	}
